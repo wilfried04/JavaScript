@@ -84,11 +84,11 @@ let rankTable = ["A","B","C","D"];
     let number = subject_points.length;
    
     // Assignez "pass" à la variable "juges".
-    let judge = "Succè";
+    let judge = "pass";
       // Si le score de chaque sujet inscrit est inférieur à 60, la variable "juges" sera à nouveau réglée 
         for(let i=0;i<number;i++){
           if (subject_points[i] <60){
-            return judge = "Echec"
+            return judge = "fail"
           }else{
             return judge
           }
@@ -110,7 +110,7 @@ let rankTable = ["A","B","C","D"];
 
     // Lorsque vous appuyez sur le bouton "juge final" (id="alerte-indication"), vous verrez "votre Le résultat e
     //st ${réalisation} et ${pass_ou_échec}. processus.
-    $('#declaration').append(`<label id="alert-indicate" class="alert alert-info">Votre Rang est: ${achievement} "Et" Votre résultat est!!! :${pass_or_failure}</label>`);
+    $('#declaration').append(`<label id="alert-indicate" class="alert alert-info">Votre Rang est: ${achievement}  Votre résultat est :${pass_or_failure}</label>`);
   };
 
   // La fonction "score_indicate()" sera déclenchée lorsque l'un des scores de [score de langue, score d'anglais, 
